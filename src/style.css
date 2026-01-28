@@ -1,0 +1,101 @@
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+h2 {
+  color: #555;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+#model-container, #training-container, #predictions-container {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+#input-container {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+#image-input {
+  margin-bottom: 10px;
+}
+
+#predict-button {
+  display: none;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#predict-button:hover {
+  background-color: #45a049;
+}
+
+#show-model-btn, #show-training-btn {
+  display: none; 
+  margin-top: 10px;
+  padding: 8px 15px;
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+#show-model-btn:hover, #show-training-btn:hover {
+  background-color: #1976D2;
+}
+
+#result-container ul, #prediction-results-container ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+#result-container li, #prediction-results-container li {
+  padding: 5px 0;
+  font-size: 16px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+pre {
+  background-color: #f4f4f4;
+  padding: 10px;
+  overflow-x: auto;
+  border-radius: 4px;
+}

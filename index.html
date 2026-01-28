@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CNN Visualization</title>
+  </head>
+  <body>
+    <div id="app">
+      <h1>Визуализация сверточной нейронной сети (CNN)</h1>
+
+      <div id="model-container">
+        <h2>Архитектура модели</h2>
+        <button id="show-model-btn">Показать архитектуру модели</button>
+        <div id="model-summary-container" style="display: none;"></div>
+        <div id="layers-info-container" style="display: none;"></div>
+      </div>
+
+      <div id="training-container">
+        <h2>Процесс обучения</h2>
+        <button id="show-training-btn">Показать процесс обучения</button>
+        <div id="metrics-container" style="display: none;"></div>
+        <div id="training-history-container" style="display: none;"></div>
+      </div>
+
+      <div id="predictions-container">
+        <h2>Прогнозирование</h2>
+        <div id="prediction-results-container"></div>
+      </div>
+
+      <div id="auto-classification-container">
+        <h2>Автоматическая классификация изображений</h2>
+        <p>Приложение автоматически генерирует и классифицирует изображения цифр каждые 5 секунд</p>
+        <div id="result-container"></div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
