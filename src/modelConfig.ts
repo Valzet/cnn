@@ -32,7 +32,7 @@ export const BATCH_SIZE = 64;
 export const EPOCHS = 5;
 
 /** Скорость обучения (learning rate) для оптимизатора Adam */
-export const LEARNING_RATE = 0.001;
+export const LEARNING_RATE = 0.01;
 
 
 
@@ -47,7 +47,7 @@ export const FILTERS_LAYER_1 = 8;
 export const FILTERS_LAYER_2 = 16;
 
 /** Размер пулинга (размер области для операции max pooling) */
-export const POOL_SIZE = [2, 2];
+export const POOL_SIZE: [number, number] = [2, 2];
 
 /** Размеры входного изображения */
 export const INPUT_SHAPE: [number, number, number] = [28, 28, 1];

@@ -12,16 +12,55 @@
 
       <div id="model-container">
         <h2>Архитектура модели</h2>
-        <button id="show-model-btn">Показать архитектуру модели</button>
-        <div id="model-summary-container" style="display: none;"></div>
-        <div id="layers-info-container" style="display: none;"></div>
+        <div id="model-summary-container"></div>
+        <div id="layers-info-container"></div>
       </div>
 
       <div id="training-container">
         <h2>Процесс обучения</h2>
-        <button id="show-training-btn">Показать процесс обучения</button>
-        <div id="metrics-container" style="display: none;"></div>
-        <div id="training-history-container" style="display: none;"></div>
+        <div id="training-history-container"></div>
+      </div>
+
+      <div id="digit-generation-container">
+        <h2>Генерация и обработка цифр</h2>
+        <div id="current-digit-display">
+          <h3>Текущая цифра для классификации:</h3>
+          <div id="digit-image-container">
+            <canvas id="digit-canvas" width="140" height="140"></canvas>
+          </div>
+          <div id="digit-label">Цифра: ?</div>
+        </div>
+
+        <div id="processing-pipeline">
+          <h3>Процесс обработки:</h3>
+          <div class="pipeline-stages">
+            <div class="stage">
+              <div class="stage-icon">🔢</div>
+              <div class="stage-name">Вход</div>
+              <div class="stage-desc">28×28 изображение</div>
+            </div>
+            <div class="stage">
+              <div class="stage-icon">🔄</div>
+              <div class="stage-name">Conv1</div>
+              <div class="stage-desc">ReLU + MaxPool</div>
+            </div>
+            <div class="stage">
+              <div class="stage-icon">🔄</div>
+              <div class="stage-name">Conv2</div>
+              <div class="stage-desc">ReLU + MaxPool</div>
+            </div>
+            <div class="stage">
+              <div class="stage-icon">📊</div>
+              <div class="stage-name">Dense</div>
+              <div class="stage-desc">Softmax</div>
+            </div>
+            <div class="stage">
+              <div class="stage-icon">🎯</div>
+              <div class="stage-name">Выход</div>
+              <div class="stage-desc">Предсказание</div>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div id="predictions-container">
@@ -29,10 +68,30 @@
         <div id="prediction-results-container"></div>
       </div>
 
+      <div id="probability-visualizer">
+        <h3>Вероятности предсказания:</h3>
+        <div id="probability-bars">
+          <!-- Bars will be generated dynamically -->
+        </div>
+      </div>
+
       <div id="auto-classification-container">
         <h2>Автоматическая классификация изображений</h2>
         <p>Приложение автоматически генерирует и классифицирует изображения цифр каждые 5 секунд</p>
         <div id="result-container"></div>
+      </div>
+
+      <!-- Модальное окно для отображения полной истории прогнозов -->
+      <div id="predictions-modal" class="modal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3>История всех предсказаний (последние 40)</h3>
+            <span class="close">&times;</span>
+          </div>
+          <div class="modal-body">
+            <div id="all-predictions-list"></div>
+          </div>
+        </div>
       </div>
     </div>
     <script type="module" src="/src/main.ts"></script>
